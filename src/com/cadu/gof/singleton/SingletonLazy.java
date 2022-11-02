@@ -1,4 +1,4 @@
-package com.cadu.gof;
+package com.cadu.gof.singleton;
 
 /**
  * Singleton "preguiçoso"

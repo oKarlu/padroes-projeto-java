@@ -1,11 +1,12 @@
-import com.cadu.gof.SingletonEager;
-import com.cadu.gof.SingletonLazy;
-import com.cadu.gof.SingletonLazyHolder;
+import com.cadu.gof.singleton.SingletonEager;
+import com.cadu.gof.singleton.SingletonLazy;
+import com.cadu.gof.singleton.SingletonLazyHolder;
+import com.cadu.gof.strategy.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        //Testes de Design Pattern Singleton
+        //Design Pattern - Singleton
 
         SingletonLazy lazy = SingletonLazy.getInstancia();
         System.out.println(lazy);
@@ -21,5 +22,23 @@ public class Main {
         System.out.println(lazyHolder);
         lazyHolder = SingletonLazyHolder.getInstancia();
         System.out.println(lazyHolder);
+
+        //Design Pattern - Strategy
+
+        Comportamento normal = new ComportamentoNormal();
+        Comportamento defensivo = new ComportamentoDefensivo();
+        Comportamento agressivo = new ComportamentoAgressivo();
+
+        Robo robo = new Robo();
+        robo.setComportamento(normal);
+        robo.mover();
+        robo.mover();
+        robo.setComportamento(defensivo);
+        robo.mover();
+        robo.setComportamento(agressivo);
+        robo.mover();
+        robo.mover();
+        robo.mover();
+
     }
 }
