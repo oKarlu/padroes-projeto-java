@@ -1,3 +1,4 @@
+import com.cadu.gof.facade.Facade;
 import com.cadu.gof.singleton.SingletonEager;
 import com.cadu.gof.singleton.SingletonLazy;
 import com.cadu.gof.singleton.SingletonLazyHolder;
@@ -39,6 +40,11 @@ public class Main {
         robo.mover();
         robo.mover();
         robo.mover();
+
+        //Design Pattern - Facade
+
+        Facade facade = new Facade();
+        facade.migrarCliente("Mario", "40028922");
 
     }
 }
